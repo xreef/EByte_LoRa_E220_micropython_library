@@ -12,6 +12,9 @@
 
 </br></br>
 
+# EBYTE LoRa E220 devices micropython library (LLCC68)   
+
+
 ### Changelog
  - 2023-03-21 0.0.1 Fully functional library
 
@@ -191,7 +194,7 @@ fixed
 ```
 
 
-# This is a porting of the Arduino library for EBYTE LoRa E32 devices to Micropython
+# This is a porting of the Arduino library for EBYTE LoRa E220 devices to Micropython
 
 ## Tutorial of the original library  
 
