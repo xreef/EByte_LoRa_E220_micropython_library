@@ -18,6 +18,13 @@
 ### Changelog
  - 2023-03-21 0.0.1 Fully functional library
 
+### Installation
+To install the library execute the following command:
+
+```bash
+pip install ebyte-lora-e220
+```
+
 ### Library usage
 Here an example of constructor, you must pass the UART interface and (if you want, but It's reccomended)
 the AUX pin, M0 and M1.
@@ -29,7 +36,7 @@ from lora_e220 import LoRaE220
 from machine import UART
 
 uart2 = UART(2)
-lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=19, m1_pin=21)
+lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=21, m1_pin=19)
 ```
 #### Start the module transmission
 

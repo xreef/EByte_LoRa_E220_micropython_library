@@ -17,7 +17,7 @@ from lora_e220_operation_constant import ResponseStatusCode
 
 uart2 = UART(2)
 
-lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=19, m1_pin=21)
+lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=21, m1_pin=19)
 
 code = lora.begin()
 print("Initialization: {}", ResponseStatusCode.get_description(code))

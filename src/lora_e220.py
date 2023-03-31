@@ -526,6 +526,10 @@ class LoRaE220:
             PacketLength.PL_CONFIGURATION)
 
         data = self.uart.read()
+        if data is None or len(data) != PacketLength.PL_CONFIGURATION+3:
+            code = ResponseStatusCode.ERR_E220_DATA_SIZE_NOT_MATCH
+            return code, None
+
         logger.debug("data: {}".format(data))
         logger.debug("data len: {}".format(len(data)))
 
