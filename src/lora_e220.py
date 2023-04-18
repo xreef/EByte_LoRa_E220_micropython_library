@@ -2,7 +2,7 @@
 # EBYTE LoRa E220 Series for MicroPython
 #
 # AUTHOR:  Renzo Mischianti
-# VERSION: 0.0.2
+# VERSION: 0.0.3
 #
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e220-devices/
@@ -323,7 +323,7 @@ class LoRaE220:
         self.uart = uart
         self.model = model
 
-        pattern = '^(400|433|868|900|915|170)(T|R|S|M)(20|27|30)(S|D|C)?..?(\\d)?$'
+        pattern = '^(230|400|900)(T|R|MM|M)(22|30)[SD]$'
 
         model_regex = ure.compile(pattern)
         if not model_regex.match(model):
