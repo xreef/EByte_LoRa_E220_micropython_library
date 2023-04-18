@@ -323,7 +323,7 @@ class LoRaE220:
         self.uart = uart
         self.model = model
 
-        pattern = '^(400|900)[TRS](22|30)[SD]$'
+        pattern = '^(400|433|868|900|915|170)(T|R|S|M)(20|27|30)(S|D|C)?..?(\\d)?$'
 
         model_regex = ure.compile(pattern)
         if not model_regex.match(model):
