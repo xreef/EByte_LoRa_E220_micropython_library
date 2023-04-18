@@ -16,6 +16,7 @@
 
 
 ### Changelog
+ - 2023-04-18 0.0.2 Distinct frequency from 900MHz and 915Mhz devices [Forum](https://www.mischianti.org/forums/topic/e32-915t-and-e32-900t-modules/)
  - 2023-03-21 0.0.1 Fully functional library
 
 ### Installation
@@ -213,11 +214,6 @@ fixed
 - Ebyte LoRa E220 device for Arduino, esp32 or esp8266: WOR microcontroller and Arduino shield
 - Ebyte LoRa E220 device for Arduino, esp32 or esp8266: WOR microcontroller and WeMos D1 shield
 - Ebyte LoRa E220 device for Arduino, esp32 or esp8266: WOR microcontroller and esp32 dev v1 shield
-
-## CHANGELOG
-- 2023-03-22 0.0.1 First stable release
-
-
 
 
 

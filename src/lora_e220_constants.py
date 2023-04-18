@@ -261,7 +261,8 @@ class OperatingFrequency:
     FREQUENCY_230 = 220
     FREQUENCY_470 = 370
     FREQUENCY_868 = 850
-    FREQUENCY_915 = 850
+    FREQUENCY_900 = 850
+    FREQUENCY_915 = 900
 
     @staticmethod
     def get_value_from_frequency(frequency):
