@@ -306,12 +306,7 @@ class TransmissionPower:
         elif self.transmission_power == self.transmission_power:
             return TransmissionPower30
         else:
-            return None
+            return "Invalid transmission power param"
 
     def get_transmission_power_description(self, transmission_power):
-        if self.transmission_power == 22:
-            return TransmissionPower22.get_description(transmission_power)
-        elif self.transmission_power == 30:
-            return TransmissionPower30.get_description(transmission_power)
-        else:
-            return "Invalid transmission power param"
+        return self.get_transmission_power().get_description(transmission_power)
