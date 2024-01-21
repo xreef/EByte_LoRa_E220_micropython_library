@@ -4,7 +4,7 @@
 # Description:
 # This script initializes the E220 LoRa module with MicroPython,
 # retrieves the current configuration, and prints it to the console.
-# The code demonstrates how to use the LoRaE32 library to interact with the module and read its configuration.
+# The code demonstrates how to use the LoRaE220 library to interact with the module and read its configuration.
 #
 # Note: This code was written and tested using MicroPython on an ESP32 board.
 #       It works with other boards, but you may need to change the UART pins.
@@ -15,9 +15,19 @@ from machine import UART
 from lora_e220 import LoRaE220, print_configuration
 from lora_e220_operation_constant import ResponseStatusCode
 
+# Create a UART object to communicate with the LoRa module with ESP32
 uart2 = UART(2)
+# Create a LoRaE220 object, passing the UART object and pin configurations
+lora = LoRaE220('433T20D', uart2, aux_pin=15, m0_pin=21, m1_pin=19)
 
-lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=21, m1_pin=19)
+# Create a UART object to communicate with the LoRa module with Raspberry Pi Pico
+# uart2 = UART(1)
+# Use the Serial1 pins of Arduino env on the Raspberry Pi Pico
+# uart2 = UART(1, rx=Pin(9), tx=Pin(8))
+# lora = LoRaE220('433T20D', uart2, aux_pin=2, m0_pin=10, m1_pin=11)
+# STM32F411CEU6 Shield
+# uart2 = UART(2)
+# lora = LoRaE220('400T22D', uart2, aux_pin='PA0', m0_pin='PB0', m1_pin='PB2')
 
 code = lora.begin()
 print("Initialization: {}", ResponseStatusCode.get_description(code))

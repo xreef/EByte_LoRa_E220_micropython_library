@@ -16,6 +16,7 @@
 
 
 ### Changelog
+ - 2023-05-02 0.0.4 Minor fix on data size message
  - 2023-04-18 0.0.3 Fix regular expression models
  - 2023-04-18 0.0.2 Distinct frequency from 900MHz and 915Mhz devices [Forum](https://www.mischianti.org/forums/topic/e32-915t-and-e32-900t-modules/)
  - 2023-03-21 0.0.1 Fully functional library

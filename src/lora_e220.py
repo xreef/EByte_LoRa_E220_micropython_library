@@ -2,7 +2,7 @@
 # EBYTE LoRa E220 Series for MicroPython
 #
 # AUTHOR:  Renzo Mischianti
-# VERSION: 0.0.3
+# VERSION: 0.0.4
 #
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e220-devices/
@@ -478,12 +478,15 @@ class LoRaE220:
             return code, None
 
         data = self.uart.read()
-        logger.debug("data: {}".format(data))
-        logger.debug("data len: {}".format(len(data)))
 
         if data is None or len(data) != PacketLength.PL_CONFIGURATION+3:
+            if data is not None:
+                logger.debug("data: {}".format(data))
+                logger.debug("data len: {}".format(len(data)))
             code = ResponseStatusCode.ERR_E220_DATA_SIZE_NOT_MATCH
             return code, None
+        logger.debug("data: {}".format(data))
+        logger.debug("data len: {}".format(len(data)))
 
         logger.debug("model: {}".format(self.model))
         configuration = Configuration(self.model)
@@ -506,7 +509,7 @@ class LoRaE220:
 
         self.managed_delay(50)  # need to check
 
-        return size != 2
+        return size != 3
 
     def get_configuration(self) -> (ResponseStatusCode, Configuration):
         code = self.check_UART_configuration(ModeType.MODE_3_PROGRAM)
@@ -527,6 +530,9 @@ class LoRaE220:
 
         data = self.uart.read()
         if data is None or len(data) != PacketLength.PL_CONFIGURATION+3:
+            if data is not None:
+                logger.debug("data: {}".format(data))
+                logger.debug("data len: {}".format(len(data)))
             code = ResponseStatusCode.ERR_E220_DATA_SIZE_NOT_MATCH
             return code, None
 
