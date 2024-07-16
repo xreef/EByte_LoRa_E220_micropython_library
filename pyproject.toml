@@ -1,0 +1,31 @@
+[project]
+name = "ebyte-lora-e220"
+version = "0.0.5"
+authors = [
+  { name="Renzo Mischianti", email="renzo@mischianti.org" },
+]
+maintainers = [
+  { name="Renzo Mischianti", email="renzo@mischianti.org" },
+]
+keywords = ["lora", "e220", "ebyte", "llcc68", "micropython", "esp32", "esp8266", "arduino", "pico", 'stm32', 'SAMD',  'UART', 'EByte']
+license = {file = "LICENSE.md"}
+description = "LoRa EBYTE E220 device library complete and tested with Arduino, esp8266, esp32, STM32 and Raspberry Pi Pico. LLCC68"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Programming Language :: Python :: Implementation :: MicroPython",
+        "License :: OSI Approved :: MIT License",
+    ]
+
+[project.urls]
+homepage = "https://www.mischianti.org"
+"Documentation" = "https://www.mischianti.org/category/my-libraries/lora-e220-llcc68-devices/"
+"Documentazione" = "https://www.mischianti.org/it/category/le-mie-librerie/dispositivi-lora-e220-llcc68/"
+"Repository" = "https://github.com/xreef/EByte_LoRa_E220_micropython_library"
+"Bug Tracker" = "https://github.com/xreef/EByte_LoRa_E220_micropython_library/issues"
+"Examples" = "https://github.com/xreef/EByte_LoRa_E220_micropython_library/tree/master/examples"
+# pyproject.toml file specified at the root of the directory
+[build-system]
+requires = ["setuptools>=42", "wheel"]   # PEP 508 specifications.
+build-backend = "setuptools.build_meta"
