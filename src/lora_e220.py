@@ -340,7 +340,7 @@ class LoRaE220:
         self.uart_baudrate = uart_baudrate
         self.mode = None
 
-    # model is like 433T20D or 433T27D or 433T30D or 868T20S or 868T27S or 868T30S
+    # model is like 400T22D or 433T27D or 433T30D or 868T20S or 868T27S or 868T30S
     # def __init__(self, model, tx_pin, rx_pin, uart_id=0, aux_pin=None, m0_pin=None, m1_pin=None,
     #              uart_baudrate=SerialUARTBaudRate.BPS_RATE_9600):
     #     self.uart = machine.UART(uart_id, tx=tx_pin, rx=rx_pin)

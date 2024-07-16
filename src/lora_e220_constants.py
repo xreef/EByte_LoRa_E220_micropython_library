@@ -284,7 +284,7 @@ class OperatingFrequency:
         return OperatingFrequency.get_value_from_frequency(device_frequency) + channel
 
 
-# model is like 433T20D or 433T27D or 433T30D or 868T20S or 868T27S or 868T30S
+# model is like 400T22D or 433T27D or 433T30D or 868T20S or 868T27S or 868T30S
 # the part before T is the frequency (example 433)
 # the part after T is the transmission power (example 20)
 # the last letter is the package type, D is for discrete S is for SMD  (example D)
@@ -301,9 +301,9 @@ class TransmissionPower:
             self.transmission_power = int(model[4:6])
 
     def get_transmission_power(self):
-        if self.transmission_power == self.transmission_power:
+        if self.transmission_power == 22:
             return TransmissionPower22
-        elif self.transmission_power == self.transmission_power:
+        elif self.transmission_power == 30:
             return TransmissionPower30
         else:
             return "Invalid transmission power param"
