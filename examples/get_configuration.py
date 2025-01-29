@@ -30,17 +30,17 @@ lora = LoRaE220('400T22D', uart2, aux_pin=15, m0_pin=21, m1_pin=19)
 # lora = LoRaE220('400T22D', uart2, aux_pin='PA0', m0_pin='PB0', m1_pin='PB2')
 
 code = lora.begin()
-print("Initialization: {}", ResponseStatusCode.get_description(code))
+print(f"Initialization: {ResponseStatusCode.get_description(code)}")
 
 code, configuration = lora.get_configuration()
 
-print("Retrieve configuration: {}", ResponseStatusCode.get_description(code))
+print(f"Retrieve configuration: {ResponseStatusCode.get_description(code)}")
 
 print_configuration(configuration)
 
 #
-# Initialization: {} Success
-# Retrieve configuration: {} Success
+# Initialization: Success
+# Retrieve configuration: Success
 # ----------------------------------------
 # HEAD :  0xc1   0x0   0x8
 #
